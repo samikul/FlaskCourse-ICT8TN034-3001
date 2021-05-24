@@ -10,7 +10,7 @@ Kurssisivut löytyvät [täältä](https://terokarvinen.com/2021/python-web-serv
 
 Edellisten tähän kurssiin liittyvien kurssien kirjoittamani raportit löytyvät [täältä](https://github.com/samikul/LinuxPalvelimet-ICT4TN021-3014/wiki) (Linux Palvelimet - ICT4TN021-3014) ja [täältä](https://github.com/samikul/PalvelintenHallinta-ICT4TN022-3011/wiki) (Palvelinten Hallinta - ICT4TN022-3011).
 
-### Lähtötilanne ja työympäristö
+### Työympäristö
 
 Tehtävät on tehty Windows 10 64-bit käyttöjärjestelmällä ja virtuaaliympäristössä pyörivällä Debianilla:
 - [Oracle VM VirtualBox 6.1.18](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
