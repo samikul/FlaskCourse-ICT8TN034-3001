@@ -7,6 +7,12 @@
   - päivitä paketit
   - python3-flask
   - "hello flask"
+- Pythonin kertausta
+  - silmukat, luokat jne.
+  - esimerkkikoodit alla
+- HTML validaattori
+  - [w3 validaattori](https://validator.w3.org/)
+
 
 ### Pythonkertausta
 Luennon esimerkit (Tero Karvinen, 24.5.2021):
@@ -234,3 +240,4 @@ if len(sys.argv)<2:
 name = sys.argv[1]
 print(f"Hello, { name }")
 ```
+
