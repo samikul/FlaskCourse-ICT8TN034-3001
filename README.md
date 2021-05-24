@@ -18,7 +18,7 @@ Tehtävät on tehty Windows 10 64-bit käyttöjärjestelmällä ja virtuaaliymp�
 
 ### Lisenssi
 
-Tätä dokumenttia saa kopioida ja muokata [GNU General Public License](http://www.gnu.org/licenses/gpl.html) (versio 3) mukaisesti.
+Tätä materiaalia saa kopioida ja muokata [GNU General Public License](http://www.gnu.org/licenses/gpl.html) (versio 3) mukaisesti.
 
 ## 01 Hei Maailma!
 
