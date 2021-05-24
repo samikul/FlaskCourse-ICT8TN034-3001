@@ -12,8 +12,9 @@ Edellisten tähän kurssiin liittyvien kurssien kirjoittamani raportit löytyvä
 
 ### Lähtötilanne ja työympäristö
 
-Tehtävät on tehty Windows 10 64-bit käyttöjärjestelmällä ja virtuaaliympäristössä pyörivällä Debianilla.
-Oracle VM VirtualBox 6.1.18 & [debian-live-10.8.0-amd64-xfce+nonfree.iso](https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/current-live/amd64/iso-hybrid/debian-live-10.8.0-amd64-xfce+nonfree.iso)
+Tehtävät on tehty Windows 10 64-bit käyttöjärjestelmällä ja virtuaaliympäristössä pyörivällä Debianilla:
+- [Oracle VM VirtualBox 6.1.18](https://www.virtualbox.org/wiki/Download_Old_Builds_6_1)
+- [debian-live-10.8.0-amd64-xfce+nonfree.iso](https://cdimage.debian.org/images/unofficial/non-free/images-including-firmware/current-live/amd64/iso-hybrid/debian-live-10.8.0-amd64-xfce+nonfree.iso)
 
 ### Lisenssi
 
