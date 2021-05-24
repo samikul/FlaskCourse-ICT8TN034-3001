@@ -1,18 +1,27 @@
+## 24.4.2021
 
+### Luennon sisältö
 
-- Hei maailma
-- Skriptin teko
+- Aloita aina helloworldilla
+- [Skriptin teko](https://github.com/samikul/LinuxPalvelimet-ICT4TN021-3014/wiki/h7#uusi-komento)
 - Paketinhallinta ja ohjelmien asentaminen
-- Hei Flask!
+- Flask!
   - päivitä paketit
-  - python3-flask
-  - "hello flask"
+  - sudo apt-get install -y python3-flask
+  - hello flask!
+  - muotit
 - Pythonin kertausta
+  - hello python!
   - silmukat, luokat jne.
-  - esimerkkikoodit alla
-- HTML validaattori
+    - esimerkkikoodit alla
+- validi HTML-sivurunko
+  - hello html!
   - [w3 validaattori](https://validator.w3.org/)
-
+- Flask
+  - [flask dokumentaatio](https://flask.palletsprojects.com/en/1.0.x/)
+  - [flask quickstart](https://flask.palletsprojects.com/en/1.0.x/quickstart/)
+  - [flask web development](https://www.oreilly.com/library/view/flask-web-development/9781491991725/)
+    - kirjan voi lukea kirjautumalla [finnaan](https://www.finna.fi/) 
 
 ### Pythonkertausta
 Luennon esimerkit (Tero Karvinen, 24.5.2021):
@@ -240,4 +249,3 @@ if len(sys.argv)<2:
 name = sys.argv[1]
 print(f"Hello, { name }")
 ```
-
