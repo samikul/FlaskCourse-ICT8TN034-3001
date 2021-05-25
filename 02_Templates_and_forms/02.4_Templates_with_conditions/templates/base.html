@@ -6,11 +6,17 @@
 		<title> {{ title  }}  </title>
 	</head>
 	<body>
-		{% block heading %}
-			<h1> {{ title }} </h1>
-		{% endblock %}
+		<h1> {{ title }} </h1>
+		<article>
 		{% block content %}
+			<p>Hello base!</p>
+		{% endblock content %}
+		</article>
 
-		{% endblock %}
+		<aside>
+			{% block sidenote %}
+				<p>Footer</p>
+			{% endblock sidenote %}
+		</aside>
 	</body>
 </html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <p> Foo </p>
+        {% if colors  %}
+                <p>We have colors</p>
+        {% else  %}
+                <p>We don't have colors</p>
+        {% endif  %}
+	{% if animals %}
+		<p>But we have animals</p>
+		<p>{{ animals }}<p>
+	{% else %}
+		<p>We don't have animals</p>
+	{% endif %}
+	
+{% endblock content %}
+
