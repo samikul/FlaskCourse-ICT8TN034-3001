@@ -20,3 +20,9 @@
 - muuttujien lisääminen muotteihin
   - `<title> {{ title }} </title>`
 
+## Yhteenveto luoennon 3. osiosta
+
+- lomakkeiden käsittelyä palvelimella
+
+
+
