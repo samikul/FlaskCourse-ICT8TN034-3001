@@ -1,6 +1,6 @@
 # Sami Kulonpää
 
-Like the [course](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) this repository is written in Finnish.-
+Like the [course](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) this repository is written in Finnish.
 
 Tässä varastossa kootusti [Haaga-Helia Ammattikorkeakoulun](https://www.haaga-helia.fi/fi) opintojakson [Python weppipalvelu - ideasta tuotantoon](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#laksyt) laatimani muistiinpanot ja vastaukseni kotitehtäviin.
 
