@@ -1,10 +1,10 @@
 # Sami Kulonpää
 
+Like the [course](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) this repository is written in Finnish.-
+
 Tässä varastossa kootusti [Haaga-Helia Ammattikorkeakoulun](https://www.haaga-helia.fi/fi) opintojakson [Python weppipalvelu - ideasta tuotantoon](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#laksyt) laatimani muistiinpanot ja vastaukseni kotitehtäviin.
 
 Opintojakson opettajana toimii [Tero Karvinen](https://terokarvinen.com).
-
-Vieraile kotisivuillani [kulonpaa.com](https://kulonpaa.com/)!
 
 ## Python weppipalvelu - ideasta tuotantoon - ICT8TN034-3001
 
@@ -71,3 +71,7 @@ tba
 ### 08 Miniprojektin esittely
 
 tba
+
+## Contact
+
+Visit my website [kulonpaa.com](https://kulonpaa.com/) and connect me on [LinkedIn](https://www.linkedin.com/in/sami-kulonp%C3%A4%C3%A4/)!
