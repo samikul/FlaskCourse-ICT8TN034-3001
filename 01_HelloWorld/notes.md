@@ -2,6 +2,10 @@
 
 ### Luennon sisältö
 
+- Hello Python
+- [Hello Flask](https://terokarvinen.com//2020/hello-flask-python-web-app/) (Tero Karvinen, 2020)
+- [Hello Templates](https://terokarvinen.com/2020/flask-templates/?fromSearch=) (Tero Karvinen, 2020)
+
 - Aloita aina helloworldilla
 - [Skriptin teko](https://github.com/samikul/LinuxPalvelimet-ICT4TN021-3014/wiki/h7#uusi-komento)
 - Paketinhallinta ja ohjelmien asentaminen
@@ -18,10 +22,10 @@
   - hello html!
   - [w3 validaattori](https://validator.w3.org/)
 - Flask
-  - [flask dokumentaatio](https://flask.palletsprojects.com/en/1.0.x/)
-  - [flask quickstart](https://flask.palletsprojects.com/en/1.0.x/quickstart/)
-  - [flask web development](https://www.oreilly.com/library/view/flask-web-development/9781491991725/)
-    - kirjan voi lukea kirjautumalla [finnaan](https://www.finna.fi/) 
+  - [Flask Dokumentaatio](https://flask.palletsprojects.com/en/1.0.x/)
+  - [Flask Quickstart](https://flask.palletsprojects.com/en/1.0.x/quickstart/)
+  - [Flask Web Development](https://www.oreilly.com/library/view/flask-web-development/9781491991725/)
+    - Kirjan voi lukea kirjautumalla [Finnaan](https://www.finna.fi/)
 
 ### Pythonkertausta
 Luennon esimerkit (Tero Karvinen, 24.5.2021):
