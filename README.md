@@ -30,7 +30,7 @@ Tätä materiaalia saa kopioida ja muokata [GNU General Public License](http://w
 
 Kurssin kotitehtävät löytyvät [täältä](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#laksyt) (Tero Karvinen, 2021).
 
-#### 01 Hei Maailma!
+### 01 Hei Maailma!
 
 [Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/01_HeiMaailma/01.0_Homeworks) kotitehtäviin.
 
