@@ -3,10 +3,10 @@ app = Flask("__name__")
 
 @app.route("/")
 def index():
-	return render_template("index.html")
+	return render_template("index.html", title="Index")
 
 @app.route("/foo")
 def foo():
-	return render_template("foo.html")
+	return render_template("foo.html", title="foo")
 
 app.run()
