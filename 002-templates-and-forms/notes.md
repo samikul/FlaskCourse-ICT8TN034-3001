@@ -1,6 +1,6 @@
 ### Luento 25.5
 
-## Yhteenveto luennon 1. osiosta:
+## Yhteenveto luennon 1. osiosta
 
 - Muotteja käytetään aina
 - Erottavat HTML-rakenteen itse koodista
@@ -12,7 +12,7 @@
 - Extends laajentaa muotteja
 - Ehtolausekkeet
 
-## Yhteenveto luennon 2. osiosta:
+## Yhteenveto luennon 2. osiosta
 
 - Muottien {% extends ... %} käyttö
 - For - silmukan käyttö
