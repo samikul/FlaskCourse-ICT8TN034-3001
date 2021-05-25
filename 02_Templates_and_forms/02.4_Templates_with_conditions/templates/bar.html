@@ -2,10 +2,10 @@
 
 {% block content %}
         <p> Bar </p>
-        {% if colors  %}
-                <p>We have colors</p>
+        {% if colors and animals %}
+                <p>We have everything!</p>
         {% else  %}
-                <p>We don't have colors</p>
+                <p>We don't have anything.</p>
         {% endif  %}
 
 {% endblock content %}

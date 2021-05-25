@@ -13,6 +13,9 @@ def foo():
 
 @app.route("/bar")
 def bar():
-	return render_template("bar.html", title="bar")
+	colors = ["red", "blue", "green", "yellow"]	
+	animals = ["monkey", "elephant", "kangaroo", "koala"]
+	return render_template("bar.html", colors=colors, animals=animals, title="bar")
 
-app.run()
+if __name__ == '__main__':
+	app.run()
