@@ -1,15 +1,19 @@
-## Luento 25.5
+### Luento 25.5
 
-Yhteenveto luennon 1. osiosta:
+## Yhteenveto luennon 1. osiosta:
 
 - Muotteja käytetään aina
-- Erottavat HTML koodista
+- Erottavat HTML-rakenteen itse koodista
   - koodinluku helpottuu
 - Muottimoottorit suojaavat hyökkäyksiltä
-  - render_template suojaa
+  - render_template suojaa mm. injektioilta
 - Muotille lähetetään lista, joka voidaan luupata läpi
-  - Silmukan sisälle voidaan lisätä HTML
+  - Silmukan sisälle voidaan lisätä HTML-koodia
 - Extends laajentaa muotteja
 - Ehtolausekkeet
+
+## Yhteenveto luennon 2. osiosta:
+
+tba
 
 
