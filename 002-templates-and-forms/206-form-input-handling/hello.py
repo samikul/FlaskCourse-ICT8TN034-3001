@@ -1,4 +1,4 @@
-## ei toimi vielä
+## DOESN'T WORK YET
 
 from flask import Flask, render_template, request
 app = Flask("__name__")
