@@ -9,7 +9,7 @@ def index():
 def foo():
 	return render_template("foo.html", title="foo")
 
-@app.route("/bar")
+@app.route("/bar", methods=["GET", "POST"])
 def bar():
 	return render_template("bar.html", title="bar")
 

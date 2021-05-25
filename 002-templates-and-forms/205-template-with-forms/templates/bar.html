@@ -2,5 +2,14 @@
 
 {% block content %}
         <p> Bar </p>
+	<form method=POST>
+		<input type=checkbox name="yes">
+		<label for="yes">Yes</label><br>
+		<input type=checkbox name="no">
+                <label for="no">No</label><br>
+		<input type=checkbox name="maybe">
+                <label for="maybe">Maybe</label><br>
+		<input type=submit>
+	</form>	
 {% endblock content %}
 
