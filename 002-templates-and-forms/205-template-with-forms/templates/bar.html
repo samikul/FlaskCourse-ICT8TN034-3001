@@ -3,13 +3,23 @@
 {% block content %}
         <p> Bar </p>
 	<form method=POST>
-		<input type=checkbox name="yes">
-		<label for="yes">Yes</label><br>
-		<input type=checkbox name="no">
-                <label for="no">No</label><br>
-		<input type=checkbox name="maybe">
-                <label for="maybe">Maybe</label><br>
-		<input type=submit>
+		<label>name:<br>
+		<input type=text name="name"></label><br>
+		
+                <label>password:<br>
+                <input type=password name="password"></label><br>
+
+                <label>email:<br>
+                <input type=email name="email"></label><br>
+
+                <label>date:<br>
+                <input type=date name="date"></label><br>
+
+		<label>Yes
+		<input type=checkbox name="yes"></label><br>
+                <label>No
+                <input type=checkbox name="no"></label><br>
+               	<input type=submit>
 	</form>	
 {% endblock content %}
 
