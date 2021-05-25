@@ -14,6 +14,9 @@
 
 ## Yhteenveto luennon 2. osiosta:
 
-tba
-
+- Muottien {% extends ... %} käyttö
+- For - silmukan käyttö
+- ehtolausekkeiden - if - else - käyttö
+- muuttujien lisääminen muotteihin
+  - `<title> {{ title }} </title>`
 
