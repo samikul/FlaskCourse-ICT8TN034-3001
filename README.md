@@ -4,6 +4,8 @@ Tässä varastossa kootusti [Haaga-Helia Ammattikorkeakoulun](https://www.haaga-
 
 Opintojakson opettajana toimii [Tero Karvinen](https://terokarvinen.com).
 
+Vieraile kotisivuillani [kulonpaa.com](https://kulonpaa.com/)!
+
 ## Python weppipalvelu - ideasta tuotantoon - ICT8TN034-3001
 
 >Python Web Service From Idea to Production
