@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<p>The four elements are:
+	<ul>
+	{% for element in elements %}
+		<li>{{ element }}</li>
+	{% endfor %}
+	</ul></p>
+{% endblock content %}

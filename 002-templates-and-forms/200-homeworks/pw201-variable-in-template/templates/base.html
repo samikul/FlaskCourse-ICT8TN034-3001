@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1> {{ title }} </h1>
+		<article>
+		<h2> foo  </h2>
+		<p>{{ hello }} {{ world }}</p>
+		{% block content  %}
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		{% endblock content  %}
+		</article>
+
+		<aside>
+		{% block sidenote %}
+			<p>Curabitur egestas vitae leo eget porta.</p>
+		{% endblock sidenote %}
+		</aside>
+
+		<footer>
+                {% block footer %}
+			<p>&copy; 2021 Copyright: Sami Kulonpää</p>
+                {% endblock footer %}
+		</footer>
+	</body>
+</html>
