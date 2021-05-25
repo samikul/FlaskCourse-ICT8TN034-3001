@@ -24,5 +24,8 @@ Tätä materiaalia saa kopioida ja muokata [GNU General Public License](http://w
 
 [Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/01_HeiMaailma/01.0_Homeworks) kotitehtäviin.
 
+Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/blob/main/01_HelloWorld/notes.md).
+
 ## 02 Muotit ja lomakkeet
 
+Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/blob/main/02_Templates_and_forms/notes.md).
