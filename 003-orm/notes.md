@@ -13,15 +13,14 @@ if __name__ == "__main__":
 - Blokki, joka korvataan omalla datalla
   - `{% for thing in things %}` ...
 
+## Esimerkkikoodit (Tero Karvinen, 26.5.2021)
 
-## Esimerkkikoodi (Tero Karvinen, 26.5.2021)
+### Hello ORM!
 
+#### based.py
 ```python
-==> 
-based.py
- <==
 from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy # sudo apt-get install flask_sqlaclhemy
+from flask_sqlalchemy import SQLAlchemy # sudo apt-get install flask_sqlalchemy
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -52,8 +51,9 @@ if __name__ == "__main__":
     
 app.run
 ()
-
-==> templates/base.html <==
+```
+#### templates/base.html
+```html
 <!doctype html>
 <html lang=en>
 	<head>
@@ -66,15 +66,14 @@ app.run
 		{% endblock content%}
 	</body>
 </html>
-
-==> templates/index.html <==
+```
+#### templates/index.html
+```html
 {% extends "base.html" %}
 
 {% block content %}
 	{% for comment in comments %}
-		<p>{{ 
-comment.name
- }}: {{ comment.text }}</p>
+		<p>{{ comment.name }}: {{ comment.text }}</p>
 	{% endfor %}
 {% endblock content %}
 ```

@@ -10,7 +10,7 @@ class Comment(db.Model):
 	name = db.Column(db.String, nullable=False)
 
 @app.before_first_request
-def iniMe():
+def initMe():
 	db.create_all()
 
 	comment = Comment(text="Hello database!", name="Matti")
