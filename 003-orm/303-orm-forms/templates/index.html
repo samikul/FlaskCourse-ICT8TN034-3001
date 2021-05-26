@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% for comment in comments %}
+		<p>{{ comment.name }}: {{ comment.text }}<br>
+		{{ comment.email }}</p>
+		<hr>
+	{% endfor %}
+{% endblock content %}
