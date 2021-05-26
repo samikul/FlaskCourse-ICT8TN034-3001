@@ -2,7 +2,7 @@
 
 Like the [course](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) this repository is written in Finnish.
 
-Tässä varastossa kootusti [Haaga-Helia Ammattikorkeakoulun](https://www.haaga-helia.fi/fi) opintojakson [Python weppipalvelu - ideasta tuotantoon](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#laksyt) laatimani muistiinpanot ja vastaukseni kotitehtäviin.
+Tässä varastossa kootusti [Haaga-Helia Ammattikorkeakoulun](https://www.haaga-helia.fi/fi) opintojakson [Python weppipalvelu - ideasta tuotantoon](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#laksyt) muistiinpanot ja vastaukseni kotitehtäviin.
 
 Opintojakson opettajana toimii [Tero Karvinen](https://terokarvinen.com).
 
@@ -16,7 +16,7 @@ Opintojakson opettajana toimii [Tero Karvinen](https://terokarvinen.com).
 
 Kurssisivut löytyvät [täältä](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) (Tero Karvinen, 2021).
 
-Edellisten tähän kurssiin liittyvien kurssien kirjoittamani raportit löytyvät [täältä](https://github.com/samikul/LinuxPalvelimet-ICT4TN021-3014/wiki) (Linux Palvelimet - ICT4TN021-3014) ja [täältä](https://github.com/samikul/PalvelintenHallinta-ICT4TN022-3011/wiki) (Palvelinten Hallinta - ICT4TN022-3011).
+Edellisten kurssiin liittyvien kurssien kirjoittamani raportit löytyvät [täältä](https://github.com/samikul/LinuxPalvelimet-ICT4TN021-3014/wiki) (Linux Palvelimet - ICT4TN021-3014) ja [täältä](https://github.com/samikul/PalvelintenHallinta-ICT4TN022-3011/wiki) (Palvelinten Hallinta - ICT4TN022-3011).
 
 ### Työympäristö
 
@@ -34,11 +34,11 @@ Kurssin kotitehtävät löytyvät [täältä](https://terokarvinen.com/2021/pyth
 
 ### 01 Hei Maailma!
 
-[Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/01_HeiMaailma/01.0_Homeworks) kotitehtäviin.
+[Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/001-hello-world/100-homeworks) kotitehtäviin.
 
 Jokaiseen tehtävään liittyvä toimivuuden todistava kuvakaappaus löytyy tehtäväkohtaisen kansion `.md` tiedostosta.
 
-Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/blob/main/01_HelloWorld/notes.md).
+Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/blob/main/001-hello-world/notes.md).
 
 ### 02 Muotit ja lomakkeet
 
@@ -46,11 +46,11 @@ Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/bl
 
 Jokaiseen tehtävään liittyvä toimivuuden todistava kuvakaappaus löytyy tehtäväkohtaisen kansion `pic.md` tiedostosta.
 
-Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/blob/main/02_Templates_and_forms/notes.md).
+Luennon [muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/blob/main/002-templates-and-forms/notes.md).
 
 ### 03 ORM
 
-tba
+
 
 ### 04 Lomakkeen käsittely
 
