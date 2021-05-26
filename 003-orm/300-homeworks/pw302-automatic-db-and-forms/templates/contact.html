@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+	<p>Send me a message!</p>
+	
+	<form method=POST>
+		{% for field in form %}
+			<p>
+			{% if not field.flags.hidden %}
+				{{ field.label }}:
+			{% endif %}
+			{{ field }}
+			</p>
+		{% endfor %}
+		<input type=submit value="Send message">
+	</form>
+{% endblock main %}

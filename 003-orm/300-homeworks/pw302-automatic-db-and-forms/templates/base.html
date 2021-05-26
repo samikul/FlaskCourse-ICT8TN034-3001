@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Base</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Sami Kulonpää">
+	</head>
+	<body>
+		<nav>
+			<a href="/">Home</a>
+			<a href="/contact">Contact</a>
+		<nav>
+
+		<main>
+		{% block main  %}
+			<p>Hello base.html mainblock</p>
+		{% endblock main %}
+		</main>
+	
+		<aside>
+		{% block sidenote %}
+			<p>Hello base.html sidenoteblock</p>
+		{% endblock sidenote %}
+		</aside>
+			
+		<footer>
+		{% block footer %}
+			<hr>	
+			<p>2021 - Sami Kulonpää</p>
+		{% endblock footer %}
+		</footer>
+	</body>
+</html>
