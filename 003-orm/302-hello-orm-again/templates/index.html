@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<ul>
+	{% for reply in replies %}
+		<li>Nimi: {{ reply.name }}</li>
+		<li>Email: {{ reply.email }}</li>
+		<li>Kyyti juhlapaikalle: {{ reply.need_a_ride }}</li>
+		<li>Lisätietoa: {{ reply.extra_info }}</li>
+		</p>
+	{% endfor %}
+	</ul>
+{% endblock content %}

@@ -1,6 +1,6 @@
-## Luento 26.5
+# Luento 26.5
 
-### Luennon 1. osio:
+## Luennon 1. osio:
 
 - asenna paketti
   - `python3-flask-sqlalchemy`
@@ -13,11 +13,12 @@ if __name__ == "__main__":
 - Blokki, joka korvataan omalla datalla
   - `{% for thing in things %}` ...
 
-## Esimerkkikoodit (Tero Karvinen, 26.5.2021)
 
-### Hello ORM!
+### Esimerkkikoodit (Tero Karvinen, 26.5.2021)
 
-#### based.py
+#### Hello ORM!
+
+##### based.py
 ```python
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy # sudo apt-get install flask_sqlalchemy
@@ -52,7 +53,7 @@ if __name__ == "__main__":
 app.run
 ()
 ```
-#### templates/base.html
+##### templates/base.html
 ```html
 <!doctype html>
 <html lang=en>
@@ -67,7 +68,7 @@ app.run
 	</body>
 </html>
 ```
-#### templates/index.html
+##### templates/index.html
 ```html
 {% extends "base.html" %}
 
@@ -77,3 +78,9 @@ app.run
 	{% endfor %}
 {% endblock content %}
 ```
+
+- ORM säästää aikaa, vaivaa ja kirjoittamista
+  - Luokka voi tehdä myös lomakkeen ja hoitaa validointia
+- Tietokantojen kanssa tulee käyttää frameworkeja 
+  - Antaa tietoturvaa ja suojaa mm. injektioilta
+    - Nyt käytössä Jinja ja SQLAlchemy
