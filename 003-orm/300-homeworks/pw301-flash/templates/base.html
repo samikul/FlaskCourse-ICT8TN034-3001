@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Base</title>
+	</head>
+	<body>
+
+		<nav>
+			<a href="/">Home</a> - 
+			<a href="/about">About</a> - 
+			<a href="/portfolio">Portfolio</a> - 
+			<a href="/contact">Contact</a> -
+			<a href="/flash">Flash</a> -
+			<a href="/msg">Message</a>			
+		</nav>
+		
+		{% if get_flashed_messages() %}
+			{% for message in get_flashed_messages() %}
+				<p><b>{{ message }}</b><p>
+			{% endfor %}
+		{% endif %}
+		
+		<article>
+		{% block heading3 %}
+			<h3>Hello heading3</h3>
+		{% endblock heading3 %}
+		
+		{% block content  %}
+			<p>Hello base's content block</p>
+		{% endblock content %}
+		</article>
+
+		<aside>
+		{% block sidenote %}
+			<p>Hello base's sidenote block.</p>
+		{% endblock sidenote %}
+		</aside>
+
+		<footer>
+		{% block footer %}
+			<hr>
+			<p>2021 -  Sami Kulonpää</p>
+		{% endblock footer %}
+		</footer>
+	</body>
+</html>
+
