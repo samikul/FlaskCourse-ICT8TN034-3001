@@ -100,6 +100,14 @@ app.run
 - `sudo apt-get install -y pwgen`
   - `pwgen 30 1`
 
+```
+{% if not field.flags.hidden %}
+```
+
+- Micro:
+  - `ctrl-E set softwrap on`
+
+
 ### Esimerkkikoodit (Tero Karvinen, 26.5.2021)
 
 #### Hello automatic forms!
