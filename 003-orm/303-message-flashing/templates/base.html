@@ -5,6 +5,11 @@
 		<meta charset="utf-8">
 	</head>
 	<body>
+	<nav>
+		<a href="/">Index</a> : 
+		<a href="/msg">Flashmessage</a> :
+		<a href="/newcomment">New comment</a>
+	</nav>
 	{% if get_flashed_messages() %}
 		{% for message in get_flashed_messages() %}
 			<p><b>{{ message }}</b></p>
