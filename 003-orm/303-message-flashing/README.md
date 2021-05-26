@@ -1,1 +1,1 @@
-![kuva](https://user-images.githubusercontent.com/58463139/119653981-a15f0a00-be30-11eb-9adc-3bfc1fea6c83.png)
+![kuva](https://user-images.githubusercontent.com/58463139/119654814-850f9d00-be31-11eb-9ea9-6ea1030c6b90.png)
