@@ -107,6 +107,9 @@ app.run
 - Micro:
   - `ctrl-E set softwrap on`
 
+- placeholder
+  - https://betterprogramming.pub/how-to-use-flask-wtforms-faab71d5a034
+  - https://github.com/heiskane/python_flask_homework/blob/main/day3/products/templates/add_product.html
 
 ### Esimerkkikoodit (Tero Karvinen, 26.5.2021)
 
@@ -175,3 +178,25 @@ app.run()
 	</form>
 {% endblock content %}
 ```
+
+### Redirect ja flashed messages
+##### .py
+```python
+... import redirect
+...
+@app.route("/msg")
+def msgPage():
+    flash("Here is a message for you!")
+    return redirect("/")
+```
+##### .html
+```html
+{% if get_flashed_messages() %}                                         
+                        {% for message in get_flashed_messages() %}                     
+                                <p><b>{{ message }}</b></p>                             
+                        {% endfor %}
+                {% endif %}
+```
+
+- https://flask.palletsprojects.com/en/1.0.x/quickstart/#message-flashing
+- https://flask.palletsprojects.com/en/1.0.x/patterns/flashing/#message-flashing-pattern
