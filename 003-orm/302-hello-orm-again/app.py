@@ -1,6 +1,6 @@
-################
-## TO BE FIXED # 
-################
+#################
+## TO BE FIXED ##
+#################
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,7 +12,7 @@ class Reply(db.Model):
 	name = db.Column(db.String, nullable=False)
 	email = db.Column(db.String, nullable=False)
 	need_a_ride = db.Column(db.Boolean, nullable=False)
-	extra_info = db.Column(db.String, nullable=True)
+	extra_info = db.Column(db.String)
 
 @app.before_first_request
 def initMe():
@@ -28,7 +28,6 @@ def initMe():
         db.session.add(reply)
 
 	db.session.commit()
-	
 
 @app.route("/")
 def index():
