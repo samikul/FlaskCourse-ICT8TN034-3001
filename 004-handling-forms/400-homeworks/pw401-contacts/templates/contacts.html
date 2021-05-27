@@ -1,0 +1,16 @@
+{% set title = "List of my contacts" %}
+{% extends "base.html" %}
+
+{% block main %}
+	{% for contact in contacts %}
+		<p>
+		{{ contact.firstname }} {{ contact.lastname }}<br>
+		{{ contact.mobile }} {{ contact.email }}<br>
+		{{ contact.streetaddress }}<br>
+		{{ contact.postalcode }} {{ contact.city }}<br> 
+		<a href="{{ contact.id }}/edit">Edit</a> - 
+		<a href="{{ contact.id }}/delete">Delete</a>
+		</p>
+		<hr style="width:50%;text-align:left;margin-left:0">
+	{% endfor %}	
+{% endblock main %}

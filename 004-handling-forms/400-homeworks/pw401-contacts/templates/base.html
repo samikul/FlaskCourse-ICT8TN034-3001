@@ -1,0 +1,65 @@
+{% if not title %}
+	{% set title = "Contact information" %}
+{% endif %}
+
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<meta name="author" content="Sami Kulonpää">
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/">Contacts</a> - 
+			<a href="/new">Add new</a>
+		</nav>
+
+		{% for msg in get_flashed_messages() %}
+			<p><mark>{{ msg }}</mark><p>
+		{% endfor %}
+
+		<h1>
+		{% block heading1 %}
+			{{ title }}
+		{% endblock heading1 %}
+		</h1>
+		
+		<main>
+			<h3>
+			{% block heading3 %}
+			{% endblock heading3 %}
+			</h3>
+
+		{% block main %}
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+				Nulla convallis fringilla nulla, auctor fermentum augue<br>
+				dictum quis. Donec vitae molestie elit. Donec ultrices<br>
+				purus sit amet tortor finibus, vel ornare magna dignissim.
+			</p>
+		{% endblock main %}
+		</main>
+
+		<aside>
+		{% block sidenote %}
+			<p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+                                Nulla convallis fringilla nulla, auctor fermentum augue<br>
+                                dictum quis. Donec vitae molestie elit. Donec ultrices<br>
+                                purus sit amet tortor finibus, vel ornare magna dignissim.
+			</p>
+		{% endblock sidenote %}
+		</aside>
+
+		<footer>
+		{% block footer %}
+			<hr style="width:50%;text-align:left;margin-left:0">
+			<p>
+				2021 - Sami Kulonpää
+			</p>
+		{% endblock footer %}
+		</footer>
+	</body>
+</html>
