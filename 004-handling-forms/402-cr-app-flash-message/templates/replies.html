@@ -1,0 +1,9 @@
+{% set title = "Replies" %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+	{% for reply in replies %}
+		<p>{{ reply.name }}: {{ reply.email }}</p><hr>
+	{% endfor %}
+{% endblock content %}

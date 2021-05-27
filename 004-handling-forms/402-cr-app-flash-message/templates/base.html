@@ -1,0 +1,38 @@
+{% if not title %}
+	{% set title = "Base" %}
+{% endif %}
+
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{{ title }}</title>
+	</head>
+	<body>	
+		<nav>
+			<a href="/">Replies</a>
+			<a href="/new">Add</a>
+		</nav>
+		<h1>{% block heading1 %} {{ title }}  {% endblock heading1 %}</h1>
+
+		{% if get_flashed_messages() %}
+			{% for message in get_flashed_messages() %}
+				<p><b>{{ message }}</b><p>
+			{% endfor %}
+		{% endif %}
+		
+		<article>
+		<h3>{% block heading3 %}{% endblock heading3 %}</h3>
+		{% block content %}
+		{% endblock content %}
+		</article>
+
+		<footer>
+		{% block footer %}
+			<hr>
+			<p>2021 - Sami Kulonpää</p>
+		{% endblock footer %}
+		</footer>
+	</body>
+</html>
