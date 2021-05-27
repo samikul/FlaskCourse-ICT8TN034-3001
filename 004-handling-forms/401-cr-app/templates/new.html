@@ -1,0 +1,19 @@
+{% set title="New color" %}
+{% extends "base.html" %}
+
+{% block content %}
+<!-- m the whole for-block -->
+<form method=POST>
+{% for field in form %}
+	<p>
+		{% if not field.flags.hidden %}
+			{{ field.label }}<br> 
+		{% endif %}
+		
+		{{ field }}
+	</p>
+{% endfor %}
+	<input type=submit value="Add">
+</form>
+
+{% endblock content %}

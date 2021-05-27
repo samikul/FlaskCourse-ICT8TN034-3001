@@ -1,0 +1,9 @@
+{% set title = "Colors" %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+	{% for color in colors %}
+		<p>{{ color.name }}</p>
+	{% endfor %}
+{% endblock content %}
