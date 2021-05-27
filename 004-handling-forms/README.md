@@ -311,3 +311,24 @@ animal.id
 
 {% endblock content %}
 ```
+## DELETE
+1. Lisää templateen Delete-linkki
+2. Vaihda endpointin loppu `/delete`
+3. Lisää reitti ym. endpointiin
+4. Luo DELETE-funktio ja anna sille parametriksi ID
+5. Luo uusi X luokan olio, joka haetaan ID:n perusteella tai antaa 404-virheilmoituksen
+6. Lisää poisto tietokannasta
+7. Lisää transaktio
+8. Lisää flash-message
+9. Lisää poiston jälkeinen uudelleenohjaus
+### Teron esimerkkikoodi (Tero Karvinen, 27.5.2021)
+```python
+@app.route("/<int:id>/delete")
+def deleteAnimal(id):
+    animal = Animal.query.get_or_404(id)
+    db.session.delete(animal)
+    db.session.commit()
+
+    flash("Deleted.")
+    return redirect("/")
+```
