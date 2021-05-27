@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% set title = "List of characters" %}
+
+{% block content %}
+	{% for character in characters %}
+	<p>{{ character.name }}</p>
+	{% endfor %}
+{% endblock content %}

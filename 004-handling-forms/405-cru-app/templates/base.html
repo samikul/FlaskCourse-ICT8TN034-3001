@@ -1,0 +1,39 @@
+{% if not title %}
+	{% set title = "Characters" %}
+{% endif %}
+
+<!doctype>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/">List</a> - 
+			<a href="/new">Add</a>
+		</nav>
+
+		<!-- m flash-if-block -->
+		{% if get_flashed_messages() %}
+			{% for message in get_flashed_messages() %}
+				<p><b>{{ message }}</b></p>
+			{% endfor %}
+		{% endif %}
+		
+		<h1>{% block heading1 %}{{ title }}{% endblock heading1 %}</h1>
+		
+		<article>
+		<h3>{% block heading3 %}{% endblock heading3 %}</h3>
+		{% block content %}
+		{% endblock content %}
+		</article>
+
+		<footer>
+		{% block footer %}
+			<hr>
+			<p>2021 - Sami Kulonpää</p>
+		{% endblock footer %}
+		</footer>
+	</body>
+</html>

@@ -174,3 +174,138 @@ animal.name
 
 {% endblock content %}
 ```
+## Update
+1. Lisää uusi reitti, johon sijoitetaan rajoitettu muuttujan tyyppi `/<int:id>/edit`
+...
+## Teron esimerkkikoodi UPDATE-ominaisuudesta (Tero Karvinen, 27.5.2021)
+´´´
+==> 
+iveseen.py
+ <==
+from flask import Flask, render_template, flash, redirect
+from flask_sqlalchemy import SQLAlchemy
+from flask_wtf import FlaskForm # m
+from wtforms.ext.sqlalchemy.orm import model_form # m
+
+app = Flask(__name__)
+app.secret_key = "CohlahT9chiel0onibae4eesee9zee"
+db = SQLAlchemy(app)
+
+class Animal(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, nullable=False)
+
+AnimalForm = model_form(Animal, base_class=FlaskForm, db_session=db.session)
+
+@app.before_first_request
+def initDb():
+    db.create_all()
+
+    animal = Animal(name="Mallard")
+    db.session.add(animal)
+
+    animal = Animal(name="Jackdaw")
+    db.session.add(animal)
+
+    db.session.commit()
+
+@app.route("/<int:id>/edit", methods=["GET", "POST"])
+@app.route("/new", methods=["GET", "POST"])
+def newAnimal(id=None):
+    animal = Animal()
+    if id:
+        animal = Animal.query.get_or_404(id)
+
+    form = AnimalForm(obj=animal)
+
+    if form.validate_on_submit():
+        form.populate_obj(animal)
+        
+        db.session.add(animal)
+        db.session.commit()
+        
+        flash("Added")
+        return redirect("/")
+
+    return render_template("new.html", form=form)
+
+@app.route("/")
+def index():
+    animals = Animal.query.all()
+    return render_template("index.html", animals=animals)
+
+if __name__ == "__main__":
+    
+app.run
+()
+
+==> templates/base.html <==
+{% if not title %}
+{% set title="Iveseen - the animalistic app" %}
+{% endif %}
+
+<!doctype html>
+<html lang=en>
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<nav>
+			<a href="/">Home</a> - 
+			<a href="/new">New</a>
+		</nav>
+
+		{% for msg in get_flashed_messages() %}
+			<p><b>{{ msg }}</b></p>
+		{% endfor %}		
+
+		<h1>{{ title }}</h1>
+		{% block content %}
+		<p>Hello, world!</p>
+		{% endblock content %}
+	</body>
+</html>
+
+==> templates/index.html <==
+{% set title="Animal base" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for animal in animals %}
+	<p>
+		{{ 
+animal.name
+ }} - 
+		<a href="{{ 
+animal.id
+ }}/edit">Edit</a>
+	</p>
+{% endfor %}
+
+
+{% endblock content %}
+
+==> templates/new.html <==
+{% set title="Add new animal you've seen" %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method=POST>
+{% for field in form %}
+	<p>
+		{% if not field.flags.hidden %}
+			{{ field.label }}<br> 
+		{% endif %}
+		
+		{{ field }}
+	</p>
+{% endfor %}
+	<input type=submit>
+</form>
+
+{% endblock content %}
+´´´
