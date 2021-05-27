@@ -47,6 +47,10 @@ CR-appin luonti vaihe vaiheelta
 ```
 $ sudo apt-cache search hakusana1 hakusana2
 ```
+Onelineri CSRF-kentän piilottamiseen
+```
+{{ field.label if not field.flags.hidden }}
+```
 ```
 $ sudo apt-get install -y pwgen
 $ pwgen 30 1
