@@ -34,7 +34,7 @@ def characters():
 	characters = Character.query.all() # m
 	return render_template("characters.html", characters=characters)
 
-@app.route("/<int:id>/delete")
+@app.route("/<int:id>/delete") # m delete
 def deleteCharacter(id):
 	character = Character.query.get_or_404(id)
 	db.session.delete(character)
@@ -43,7 +43,7 @@ def deleteCharacter(id):
 	flash("Deleted.")
 	return redirect("/")
 
-@app.route("/<int:id>/edit", methods=["GET", "POST"])
+@app.route("/<int:id>/edit", methods=["GET", "POST"]) # m update
 @app.route("/new", methods=["GET", "POST"])
 def newCharacter(id=None):
 	character = Character()
