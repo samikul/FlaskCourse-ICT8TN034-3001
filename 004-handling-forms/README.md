@@ -178,10 +178,9 @@ animal.name
 1. Lisää uusi reitti, johon sijoitetaan rajoitettu muuttujan tyyppi `/<int:id>/edit`
 ...
 ## Teron esimerkkikoodi UPDATE-ominaisuudesta (Tero Karvinen, 27.5.2021)
-´´´
-==> 
-iveseen.py
- <==
+```python 
+# iveseen.py
+
 from flask import Flask, render_template, flash, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm # m
@@ -238,7 +237,8 @@ if __name__ == "__main__":
     
 app.run
 ()
-
+```
+```html
 ==> templates/base.html <==
 {% if not title %}
 {% set title="Iveseen - the animalistic app" %}
@@ -267,7 +267,8 @@ app.run
 		{% endblock content %}
 	</body>
 </html>
-
+```
+```html
 ==> templates/index.html <==
 {% set title="Animal base" %}
 {% extends "base.html" %}
@@ -287,7 +288,8 @@ animal.id
 
 
 {% endblock content %}
-
+```
+```html
 ==> templates/new.html <==
 {% set title="Add new animal you've seen" %}
 {% extends "base.html" %}
@@ -308,4 +310,4 @@ animal.id
 </form>
 
 {% endblock content %}
-´´´
+```
