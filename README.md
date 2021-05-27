@@ -36,17 +36,25 @@ Kurssin kotitehtävät löytyvät [täältä](https://terokarvinen.com/2021/pyth
 
 [Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/001-hello-world/100-homeworks) kotitehtäviin.
 
+[Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/001-hello-world).
+
 ### 02 Muotit ja lomakkeet
 
 [Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/002-templates-and-forms/200-homeworks) kotitehtäviin.
+
+[Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/002-templates-and-forms).
 
 ### 03 ORM
 
 [Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/003-orm/300-homeworks) kotitehtäviin.
 
+[Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/003-orm).
+
 ### 04 Lomakkeen käsittely
 
-tba
+[Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/004-handling-forms/400-homeworks) kotitehtäviin.
+
+[Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/004-handling-forms).
 
 ### 05 Tuotantopalvelin
 
