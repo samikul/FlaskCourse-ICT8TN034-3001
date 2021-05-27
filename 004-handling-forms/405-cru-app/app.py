@@ -34,12 +34,16 @@ def characters():
 	characters = Character.query.all() # m
 	return render_template("characters.html", characters=characters)
 
+@app.route("/<int:id>/edit", methods=["GET", "POST"])
 @app.route("/new", methods=["GET", "POST"])
-def newCharacter():
-	form = CharacterForm()
+def newCharacter(id=None):
+	character = Character()
+	if id:
+		character = Character.query.get_or_404(id)
+	
+	form = CharacterForm(obj=character)
 
 	if form.validate_on_submit(): # m the whole if block
-		character = Character()
 		form.populate_obj(character)
 
 		db.session.add(character)
