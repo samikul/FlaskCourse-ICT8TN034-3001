@@ -321,7 +321,7 @@ animal.id
 7. Lisää transaktio
 8. Lisää flash-message
 9. Lisää poiston jälkeinen uudelleenohjaus
-### Teron esimerkkikoodi (Tero Karvinen, 27.5.2021)
+### Teron esimerkkikoodi DELETE-toiminnosta (Tero Karvinen, 27.5.2021)
 ```python
 @app.route("/<int:id>/delete")
 def deleteAnimal(id):
