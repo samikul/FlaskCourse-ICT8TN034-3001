@@ -47,6 +47,8 @@ Web-appin luonti pienin mahdollinen testattava osa kerrallaan
 ### Hello Update
 - Lisää muottiin edit-linkki, jonka URL:iin lisätään kyseisen kentän id ja `/edit` endpoint
 - Lisää reitti, joka käsittelee URL:in mukana tulevan id:n
+- Lisää käsittelevään funktioon arvo id=None
+- Lisää ehto: if id=True
 - ... *JATKA TÄSTÄ*
 ### Hello Delete
 - Lisää muottiin delete-linkki, jonka URL:iin lisätään kyseisen kentän id ja `/delete` endpoint
