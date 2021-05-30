@@ -11,3 +11,6 @@ jota voi muokata tai jonka voi poistaa kokonaan. Postaukset näkyvät kaikille.
 
 Custom blog-appliocation for personal web-based portfolio.
 
+### Licence
+
+
