@@ -56,11 +56,13 @@ Kurssin kotitehtävät löytyvät [täältä](https://terokarvinen.com/2021/pyth
 
 [Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/004-handling-forms).
 
-### 05 Tuotantopalvelin
+### 05 Käyttäjät ja salasanat
 
-tba
+[Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/005-users-and-login/500-homeworks) kotitehtäviin.
 
-### 06 Käyttäjät ja kirjautuminen. Testaus
+[Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/005-users-and-login).
+
+### 06 Tuotantopalvelin
 
 tba
 
