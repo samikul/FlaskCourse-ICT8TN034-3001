@@ -5,7 +5,7 @@ from flask_wtf import FlaskForm
 from wtforms.ext.sqlalchemy.orm import model_form # sudo apt-get install -y python3-flaskext.wtf
 
 app = Flask(__name__)
-app.secret_key = "joleeficaeghisdfgeR9eöäxohzuioph678eitohquei2"
+app.secret_key = "joleeficaeghisdfgeR9exohzuioph678eitohquei2"
 db = SQLAlchemy(app)
 
 class Post(db.Model):
