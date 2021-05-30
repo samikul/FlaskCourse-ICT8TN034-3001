@@ -81,12 +81,9 @@ annetaan käyttäjäpalautetta
 # Teron esimerkkikoodi 28.5.2021
 [Tero Karvinen](https://terokarvinen.com)
 CRUD-app, käyttäjäkirjautumisilla
+#### teejo.py
 ```python
-==> 
-teejo.py
- <==
-# User example - 
-http://TeroKarvinen.com
+# User example - http://TeroKarvinen.com
 
 from flask import Flask, render_template, flash, redirect, session
 from flask_sqlalchemy import SQLAlchemy
@@ -94,9 +91,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from wtforms.ext.sqlalchemy.orm import model_form
 
-from 
-werkzeug.security
- import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 from wtforms import StringField, PasswordField, validators
 
 app = Flask(__name__)
@@ -121,9 +116,7 @@ class User(db.Model):
 		return check_password_hash(self.passwordHash, password)
 
 class UserForm(FlaskForm):
-	email = StringField("email", validators=[
-validators.Email
-()])
+	email = StringField("email", validators=[validators.Email()])
 	password = PasswordField("password", validators=[validators.InputRequired()])
 
 ## User utility functions
@@ -144,11 +137,9 @@ def loginView():
 	form = UserForm()
 
 	if form.validate_on_submit():
-		email = 
-form.email.data
+		email = form.email.data
 
-		password = 
-form.password.data
+		password = form.password.data
 
 
 		user = User.query.filter_by(email=email).first()
@@ -161,8 +152,7 @@ form.password.data
 			print("Wrong password")
 			return redirect("/user/login")
 
-		session["uid"]=
-user.id
+		session["uid"]=user.id
 
 		flash("Login successful.")
 		return redirect("/")
@@ -174,11 +164,9 @@ def registerView():
 	form = UserForm()
 
 	if form.validate_on_submit():
-		email = 
-form.email.data
+		email = form.email.data
 
-		password = 
-form.password.data
+		password = form.password.data
 
 
 		if User.query.filter_by(email=email).first():
@@ -251,10 +239,10 @@ def indexView():
 
 if __name__ == "__main__":
 	
-app.run
-()
-
-==> templates/404.html <==
+app.run()
+```
+#### templates/404.html
+```html
 {% set title="404 page not found" %}
 {% extends "base.html" %}
 
@@ -265,8 +253,9 @@ app.run
 </p>
 	
 {% endblock content %}
-
-==> templates/add.html <==
+```
+#### templates/add,html
+```html
 {% set title="Add Teejo Task" %}
 {% extends "base.html" %}
 
@@ -290,8 +279,9 @@ app.run
 	</form>
 
 {% endblock content %}
-
-==> templates/base.html <==
+```
+#### templates/base.html
+```html
 {% if not title %}
 	{% set title="Welcome to Teejo" %}
 {% endif %}
@@ -326,8 +316,9 @@ app.run
 
 	</body>
 </html>
-
-==> templates/index.html <==
+```
+#### templates/index.html
+```html
 {% set title="Your Teejo Tasks" %}
 {% extends "base.html" %}
 
@@ -335,23 +326,18 @@ app.run
 
 	{% for task in tasks %}
 		<p>
-			<a href="/task/{{ 
-task.id
- }}/edit">
-				{{ 
-task.name
- }}
+			<a href="/task/{{ task.id }}/edit">
+				{{ task.name }}
 			</a>
 			-
-			<a href="/task/{{ 
-task.id
- }}/delete">Delete</a>
+			<a href="/task/{{ task.id }}/delete">Delete</a>
 		</p>
 	{% endfor %}
 	
 {% endblock content %}
-
-==> templates/login.html <==
+```
+#### templates/login.html
+```
 {% set title="Login" %}
 {% extends "base.html" %}
 
@@ -375,8 +361,9 @@ task.id
 	</form>
 
 {% endblock content %}
-
-==> templates/register.html <==
+```
+#### templates/register.html
+```html
 {% set title="Register new user" %}
 {% extends "base.html" %}
 

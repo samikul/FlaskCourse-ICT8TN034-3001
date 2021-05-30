@@ -1,0 +1,15 @@
+{% set title = "Blog" %}
+
+{% extends "base.html" %}
+
+{% block main %}
+	{% for post in posts %}
+	<p>
+		<b>{{ post.heading }}</b><br>
+		<i>{{ post.author }}</i><br>
+		{{ post.text }}<br>
+		<a href="{{ post.id }}/edit">Edit</a> -
+		<a href="{{ post.id }}/delete">Delete</a>
+	</p>
+	{% endfor %}
+{% endblock main %}
