@@ -1,0 +1,15 @@
+{% set title = "Characters" %}
+
+{% extends "base.html" %}
+
+{% block main %}
+	{% for character in characters %}
+	<p>
+		{{ character.name }}<br>
+		{% if currentUser() %}
+			<a href="{{ character.id }}/edit">Edit</a> -
+			<a href="{{ character.id }}/delete">Delete</a>
+		{% endif %}
+	</p>
+	{% endfor %}
+{% endblock main %}
