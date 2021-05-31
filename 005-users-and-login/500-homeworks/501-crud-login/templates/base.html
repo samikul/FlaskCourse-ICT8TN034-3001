@@ -1,0 +1,63 @@
+{% if not title %}
+	{% set title = "Base" %}
+{% endif %}
+
+<!doctype html>
+<html lang=en>
+	<head>
+		<meta charset="utf-8">
+		<title> {{ title }} </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<nav>
+			<a href="/">Home</a> -
+			<a href="/blog">Blog</a>
+			{% if currentUser() %} -
+				<a href="/newpost">Write a new post</a> -
+				Logged in as <i>{{ currentUser().email }}</i> -
+				<a href="/user/logout">Logout</a>
+			{% else %} -
+				<a href="/user/login">Login</a> - 
+				<a href="/user/register">Register</a>
+			{% endif %}
+		</nav>
+		
+		{% if get_flashed_messages() %}
+			{% for message in get_flashed_messages() %}
+				<p><mark>{{ message }}</mark><p>
+			{% endfor %}
+		{% endif %}
+
+		<main>
+			<h1>
+			{% block heading1 %}
+			{{ title }}
+			{% endblock heading1 %}
+			</h1>	
+	
+			{% block main %}
+			<p>
+			Hello base's main block
+			</p>
+			{% endblock main %}
+		</main>
+	
+		<aside>
+                	{% block  aside %}
+			<p>
+			Hello base's aside-block
+			</p>
+                	{% endblock aside %}
+		</aside>
+
+		<footer>
+                	{% block footer %}
+			<hr>
+			<p>
+				2021 - Sami Kulonpää
+			</p>
+                	{% endblock footer %}
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% set title = "List of characters" %}
+
+{% block content %}
+	{% for character in characters %}
+	<p>{{ character.name }} - 
+		<a href="/{{ character.id }}/edit">Edit</a> -
+		<a href="/{{ character.id }}/delete">Delete</a>
+	</p>	
+	{% endfor %}
+{% endblock content %}
