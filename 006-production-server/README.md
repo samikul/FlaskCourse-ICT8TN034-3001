@@ -50,4 +50,39 @@ class User(db.Model):
 	passwordHash = db.Column(db.String, nullable=False)
 ```
 [FLASK SQLALCHEMY](https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/)
+#### Apache
+```
+sudo apt-get install -y apache2
+sudo systemctl start apache2
 
+```
+https://terokarvinen.com/2020/deploy-python-flask-to-production/?fromSearch=
+
+Lukittu ryhmäkäyttäjä
+```
+# Luo projektikäyttäjä
+sudo adduser samiwsgi
+# 
+sudo usermod --lock samiwsgi
+# 
+sudo mkdir public_wsgi
+sudo chown samiwsgi:samiwsgi public_wsgi
+sudo chmod d+rwxs public_wsgi
+sudo adduser sami samiwsgi
+exit
+```
+Shared, jaetut kansiot
+https://terokarvinen.com//2011/shared-folder-with-chmod-setgid/index.html?fromSearch=
+
+Teknisen käyttäjän luonti
+```
+sudo adduser samiwsgi
+sudo usermod --lock samiwsgi
+
+sudo mkdir /home/samiwsgi/public_wsgi/
+sudo chown samiwsgi:samiwsgi /home/samiwsgi/public_wsgi/
+sudo chmod g+rwxs /home/samiwsgi/public_wsgi/
+
+sudo adduser sami samiwsgi
+# todo: log out, log in
+```
