@@ -64,15 +64,15 @@ Kurssin kotitehtävät löytyvät [täältä](https://terokarvinen.com/2021/pyth
 
 ### 06 Tuotantopalvelin
 
-tba
+[Vastaukset](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/006-production-server/600-homeworks) kotitehtäviin.
 
-### 07 Miniprojektin rakentamista
+[Muistiinpanot](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/006-production-server).
 
-tba
+### 07 Miniprojekti
 
-### 08 Miniprojektin esittely
+[Miniprojektin GitHub-varasto](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/007-miniproject/700-miniproject).
 
-tba
+Projekti [tuotannossa](http://165.22.78.96/).
 
 ## Contact
 
