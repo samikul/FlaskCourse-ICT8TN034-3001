@@ -172,6 +172,7 @@ def currentUser():
 
 app.jinja_env.globals["currentUser"] = currentUser
 
+"""
 @app.route("/user/register", methods=["GET", "POST"])
 def signupView():
 	form = UserForm()
@@ -195,7 +196,7 @@ def signupView():
 		return redirect("/user/login")
 
 	return render_template("signup.html", form=form)
-
+"""
 @app.route("/user/login", methods=["GET", "POST"])
 def loginView():
 	form = UserForm()

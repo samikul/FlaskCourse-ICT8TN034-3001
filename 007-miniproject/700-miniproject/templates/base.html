@@ -24,9 +24,11 @@
 				<a href="/contactlist">Read messages</a> 
 				<a>Hello, {{ currentUser().email }}!</a> 
 				<a href="/user/logout">Log out</a>
-			{% else %} 
+			{% else %}
+			<!-- Hide from visitors 
 				<a href="/user/login">Log in</a> 
 				<a href="/user/register">Sign up</a>
+			-->
 			{% endif %}
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		<i class="fa fa-bars"></i></a>
