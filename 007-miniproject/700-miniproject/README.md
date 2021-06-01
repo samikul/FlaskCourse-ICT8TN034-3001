@@ -1,10 +1,12 @@
+[Try it](http://165.22.78.96/) yourself.
+
 # Blog-app
 
-Kurssin [Python webbipalvelu - ideasta tuotantoon](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) lopputyö.
+[Python webservice - from idea to production](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) -course's miniproject with CRUD-functionalities, PostgreSQL and user login.
 
-## About
+## About in Finnish
 
-Web-sivujen blog-ominaisuus. Sivujen ylläpitäjä voi kirjautua sisään ja kirjoittaa postauksen,
+Web-sivujen blog- ja yhteydenotto-ominaisuus. Sivujen ylläpitäjä voi kirjautua sisään ja kirjoittaa postauksen,
 jota voi muokata tai jonka voi poistaa kokonaan. Postaukset näkyvät kaikille.
 
 ### Business purpose
@@ -23,7 +25,7 @@ Custom blog-application and contact-me-form for personal web-based portfolio.
 ### Successfully signed up
 ![kuva](https://user-images.githubusercontent.com/58463139/120323482-31e49100-c2ee-11eb-98a4-a3c30fd2d0b2.png)
 
-## Disabled sign up-form
+### Disabled sign up-form
 ![kuva](https://user-images.githubusercontent.com/58463139/120323160-e0d49d00-c2ed-11eb-9b1a-749f0565a329.png)
 
 ### Login view
