@@ -1,0 +1,17 @@
+{% set title = "Messages" %}
+
+{% extends "base.html" %}
+
+{% block main %}
+	{% for contact in contacts %}
+	<p>
+		<b>{{ contact.name }}</b><br>
+		{{ contact.email }}<br>
+		{{ contact.text }}<br>
+		{% if currentUser() %}
+			<a href="edit/msg/{{ contact.id }}">Edit</a> -
+			<a href="delete/msg/{{ contact.id }}">Delete</a>
+		{% endif %}
+	</p>
+	{% endfor %}
+{% endblock main %}

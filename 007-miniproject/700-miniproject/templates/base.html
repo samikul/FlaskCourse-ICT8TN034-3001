@@ -1,5 +1,5 @@
 {% if not title %}
-	{% set title = "Base" %}
+	{% set title = "Sami Kulonpää" %}
 {% endif %}
 
 <!doctype html>
@@ -8,19 +8,28 @@
 		<meta charset="utf-8">
 		<title> {{ title }} </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		<!-- navbar styles -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
-		<nav>
-			<a href="/">Home</a> -
+		<nav class="topnav" id="responsiveTopnav">
+			<a href="/" class="active">Home</a> -
 			<a href="/blog">Blog</a>
-			{% if currentUser() %} -
-				<a href="/newpost">Write a new post</a> -
-				Logged in as <i>{{ currentUser().email }}</i> -
-				<a href="/user/logout">Logout</a>
-			{% else %} -
-				<a href="/user/login">Login</a> - 
-				<a href="/user/register">Register</a>
+			{% if currentUser() %}
+				<a href="/newpost">New post</a>
 			{% endif %}
+			<a href="/newcontact">Contact me</a>
+			{% if currentUser() %}
+				<a href="/contactlist">Read messages</a> 
+				<a>Hello, {{ currentUser().email }}!</a> 
+				<a href="/user/logout">Log out</a>
+			{% else %} 
+				<a href="/user/login">Log in</a> 
+				<a href="/user/register">Sign up</a>
+			{% endif %}
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<i class="fa fa-bars"></i></a>
 		</nav>
 		
 		{% if get_flashed_messages() %}
@@ -28,6 +37,13 @@
 				<p><mark>{{ message }}</mark><p>
 			{% endfor %}
 		{% endif %}
+
+		<aside>
+                	{% block  aside %}
+			<p>
+			</p>
+                	{% endblock aside %}
+		</aside>
 
 		<main>
 			<h1>
@@ -43,21 +59,27 @@
 			{% endblock main %}
 		</main>
 	
-		<aside>
-                	{% block  aside %}
-			<p>
-			Hello base's aside-block
-			</p>
-                	{% endblock aside %}
-		</aside>
-
 		<footer>
                 	{% block footer %}
 			<hr>
 			<p>
-				2021 - Sami Kulonpää
-			</p>
-                	{% endblock footer %}
+			© 2021 Copyright: Sami Kulonpää<br>
+			<a href="https://kulonpaa.com/" target="_blank">kulonpaa.com</a><br>
+			<a href="https://www.linkedin.com/in/sami-kulonp%C3%A4%C3%A4/" target="_blank">LinkedIn</a><br>
+			<a href="https://github.com/samikul" target="_blank">Github</a>
+                	</p>
+			{% endblock footer %}
 		</footer>
+		
+		<script>
+		function myFunction() {
+			var x = document.getElementById("responsiveTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		} 
+		</script>
 	</body>
 </html>

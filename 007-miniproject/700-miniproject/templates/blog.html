@@ -9,8 +9,8 @@
 		<i>{{ post.author }}</i><br>
 		{{ post.text }}<br>
 		{% if currentUser() %}
-			<a href="{{ post.id }}/edit">Edit</a> -
-			<a href="{{ post.id }}/delete">Delete</a>
+			<a href="edit/post/{{ post.id }}">Edit</a> -
+			<a href="delete/post/{{ post.id }}">Delete</a>
 		{% endif %}
 	</p>
 	{% endfor %}

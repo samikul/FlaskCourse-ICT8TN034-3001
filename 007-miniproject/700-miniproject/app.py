@@ -1,5 +1,6 @@
-from flask import Flask, render_template, redirect, flash, session # sudo apt-get install -y python3-flask
+from flask import Flask, render_template, redirect, flash, session, abort # sudo apt-get install -y python3-flask
 from flask_sqlalchemy import SQLAlchemy # sudo apt-get install -y python3-flask-sqlalchemy
+from functools import wraps
 
 from flask_wtf import FlaskForm
 from wtforms.ext.sqlalchemy.orm import model_form # sudo apt-get install -y python3-flaskext.wtf
@@ -9,7 +10,12 @@ from wtforms import StringField, PasswordField, validators
 
 app = Flask(__name__)
 app.secret_key = "joleeficaeghisdfgeR9exohzuioph678eitohquei2"
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql:///sami'
 db = SQLAlchemy(app)
+
+############
+# Database #
+############
 
 class Post(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -18,6 +24,14 @@ class Post(db.Model):
 	text = db.Column(db.Text, nullable=False)
 
 PostForm = model_form(Post, base_class=FlaskForm, db_session=db.session)
+
+class Contact(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	name = db.Column(db.String, nullable=False)
+	email = db.Column(db.String, nullable=False)
+	text = db.Column(db.Text, nullable=False)
+
+ContactForm = model_form(Contact, base_class=FlaskForm, db_session=db.session)
 
 class User(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -38,23 +52,25 @@ class UserForm(FlaskForm):
 def initDB():
 	db.create_all()
 
-	post = Post(author="Matti Meikäläinen", heading="Ensimmäinen postaus",
-	text="Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-	db.session.add(post)
+# 	Test data
 
-	post = Post(author="Matti Meikäläinen", heading="Toinen postaus",
-	text="Curabitur vitae convallis mauris, vitae ornare ligula.")
-	db.session.add(post)
+#	post = Post(author="Erkki Esimerkki", heading="Otsikko", text="Postaus aiheesta tämä ja tuo.")
+#	db.session.add(post)
 
-	post = Post(author="Matti Meikäläinen", heading="Kolmas postaus",
-	text="Integer in blandit quam, ut feugiat augue.")
-	db.session.add(post)
+# 	Test data
+
+#	contact = Contact(name="Erkki Esimerkki", email="erkki@example.com", text="Asia koskee tätä ja tuota.")
+#	db.session.add(contact)
 
 	db.session.commit()
 
 @app.errorhandler(404)
 def custom404(e):
 	return render_template("404.html")
+
+##################################
+# Blog views and functionalities #
+##################################
 
 @app.route("/")
 def homeView():
@@ -65,7 +81,8 @@ def blogView():
 	posts = Post.query.all()
 	return render_template("blog.html", posts=posts)
 
-@app.route("/<int:id>/edit", methods=["GET", "POST"])
+
+@app.route("/edit/post/<int:id>", methods=["GET", "POST"])
 @app.route("/newpost", methods=["GET", "POST"])
 def createPost(id=None):
 	loginRequired()
@@ -84,11 +101,9 @@ def createPost(id=None):
 		flash("Post added")
 		return redirect("/blog")
 
-		# print("Post added") # test only
-
 	return render_template("newpost.html", form=form)
 
-@app.route("/<int:id>/delete")
+@app.route("/delete/post/<int:id>")
 def deletePost(id):
 	loginRequired()
 	post = Post.query.get_or_404(id)
@@ -98,9 +113,51 @@ def deletePost(id):
 	flash("Post deleted.")
 	return redirect("/blog")
 
-########
-# USER #
-########
+#####################################
+# Contact views and functionalities #
+#####################################
+
+@app.route("/contactlist")
+def contactsView():
+	loginRequired()
+	contacts = Contact.query.all()
+	return render_template("contactlist.html", contacts=contacts)
+
+@app.route("/edit/msg/<int:id>", methods=["GET", "POST"])
+@app.route("/newcontact", methods=["GET", "POST"])
+def editContact(id=None):
+	contact = Contact()
+	if id:
+		loginRequired()
+		contact = Contact.query.get_or_404(id)
+
+	form = ContactForm(obj=contact)
+
+	if form.validate_on_submit():
+		form.populate_obj(contact)
+
+		db.session.add(contact)
+		db.session.commit()
+
+		flash("Thank you for your message. I'll get in touch with you soon!")
+		return redirect("/")
+		# print("Message added.") # test only
+
+	return render_template("newcontact.html", form=form)
+
+@app.route("/delete/msg/<int:id>")
+def deleteContact(id):
+	loginRequired()
+	contact = Contact.query.get_or_404(id)
+	db.session.delete(contact)
+	db.session.commit()
+
+	flash("Message deleted.")
+	return redirect("/contactlist")
+
+##################################
+# User views and functionalities #
+##################################
 
 def loginRequired():
 	if not currentUser():

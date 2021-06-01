@@ -1,0 +1,20 @@
+{% set title = "Get in touch with me!" %}
+
+{% extends "base.html" %}
+
+{% block main %}
+<p>
+	Feel free to send me a message. I'll get back to you as soon as possible!
+</p>
+<form method=POST>
+{% for field in form %}
+	<p>
+	{% if not field.flags.hidden %}
+		{{ field.label }}<br>
+	{% endif %}
+	{{ field }}
+	</p>
+{% endfor %}
+	<input type=submit value="Send">
+</form>
+{% endblock main %}
