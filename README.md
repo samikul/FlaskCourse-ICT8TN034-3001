@@ -70,7 +70,7 @@ Kurssin kotitehtävät löytyvät [täältä](https://terokarvinen.com/2021/pyth
 
 ### 07 Miniprojekti
 
-[Miniprojektin GitHub-varasto](https://github.com/samikul/FlaskCourse-ICT8TN034-3001/tree/main/007-miniproject/700-miniproject).
+[Miniprojektin GitHub-varasto](https://github.com/samikul/flask-blog).
 
 Projekti [tuotannossa](http://165.22.78.96/).
 
