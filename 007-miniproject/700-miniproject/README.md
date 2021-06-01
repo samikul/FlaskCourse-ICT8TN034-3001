@@ -1,15 +1,10 @@
-[Try it](http://165.22.78.96/) yourself.
+# Personal portfolio
 
-# Blog-app
+[Try it](http://165.22.78.96/) out!
 
 [Python webservice - from idea to production](https://terokarvinen.com/2021/python-web-service-from-idea-to-production/) -course's miniproject with CRUD-functionalities, PostgreSQL and user login.
 
-## About in Finnish
-
-Web-sivujen blog- ja yhteydenotto-ominaisuus. Sivujen ylläpitäjä voi kirjautua sisään ja kirjoittaa postauksen,
-jota voi muokata tai jonka voi poistaa kokonaan. Postaukset näkyvät kaikille.
-
-### Business purpose
+### About
 
 Custom blog-application and contact-me-form for personal web-based portfolio.
 
