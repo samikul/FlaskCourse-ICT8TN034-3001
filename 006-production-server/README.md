@@ -86,3 +86,10 @@ sudo chmod g+rwxs /home/samiwsgi/public_wsgi/
 sudo adduser sami samiwsgi
 # todo: log out, log in
 ```
+Sähköpostin lähetys:
+- sendgrid tai mailgun
+- python3-requests (requests)
+
+https suojaus:
+- letsencrypt
+- lego
